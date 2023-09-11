@@ -13,8 +13,12 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 **github link of InsightFace** https://github.com/deepinsight/insightface
 
 ## Tech Stack Used
-Python </br>
-MTCNN(Multi-task Cascaded Convolutional Networks https://pypi.org/project/mtcnn/ </br>
+1. Python </br>
+2. MTCNN(Multi-task Cascaded Convolutional Networks)  https://pypi.org/project/mtcnn/  </br>
+3.
+4.
+5.
+6.
 
 
 
