@@ -51,3 +51,13 @@ MTCNN</br>
 ## How project was designed and build
 1. Write **template.p**y which create a folder structure of our project. Within each folders, it will create the filenames where we will be writing our code. </br>
 2. Clone **YOLOV5** github repo from git  using "clone https://github.com/ultralytics/yolov5.git" and delete its .git and .gitignore folder </br>
+
+## Theory behind Face Recongition
+1. Get input images of the human faces. </br>
+2. Human faces needs to be labelled with the name. </br>
+3. For face detection: </br>
+4. Face needs to be converted into numbers(co-ordinate) </br>
+![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c)
+
+5.
+6.  </br>
