@@ -10,7 +10,8 @@ import cv2
 import os
 from datetime import datetime
 
-# logic to take images from live video and then crop the facial part of the image from the complete image taken
+
+# Purpose is the get 50 images from live feed of camera and crop the facial feature of the image and save it in 112*112 dimension
 class TrainingDataCollector:
 
     def __init__(self, args):

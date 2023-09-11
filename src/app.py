@@ -13,8 +13,9 @@ import random
 from src.clientApp import collectUserImageForRegistration, getFaceEmbedding, trainModel
 from src.collect_trainingdata.get_faces_from_camera import TrainingDataCollector
 from src.face_embedding.faces_embedding import GenerateFaceEmbedding
-from src.predictor.facePredictor import FacePredictor
 from src.training.train_softmax import TrainFaceRecogModel
+from src.predictor.facePredictor import FacePredictor
+
 
 
 class RegistrationModule:
@@ -91,7 +92,7 @@ class RegistrationModule:
         quitWindow = tk.Button(self.window, text="Quit", command=self.close_window, fg="white", bg="#363e75", width=10, height=2,
                                activebackground="#118ce1", font=('times', 15, 'bold'))
         quitWindow.place(x=650, y=510)
-        link2 = tk.Label(self.window, text="Copyright©2020, Ineuron.ai", fg="blue", )
+        link2 = tk.Label(self.window, text="Copyright©2020, ravi.ai", fg="blue", )
         link2.place(x=690, y=580)
         # link2.pack()
         link2.bind("<Button-1>", lambda e: self.callback("http://ravi@ai"))
