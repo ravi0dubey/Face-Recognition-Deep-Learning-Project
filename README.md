@@ -57,9 +57,9 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 2. ss
 3. **get_faces_from_camera.py->** Purpose is the get the 50 images from live feed of camera and crop the facial feature of the image and save it in 112*112 dimension </br> 
 4. **faces_embedding.py->** Purpose of this class is to convert image into numerical value and saving it in pickel format. This process is called Face Embedding </br>
-5. **train_softmax.py->** Purpose is to train the model using embeddings of the image. Model is trained in batchsize of 8 with 5 epochs. Relu activation for hidden layer and softmax for output layer. Saving the output as pickle format.
-6. ss
-7. ss</br>
+5. **train_softmax.py->** Purpose is to train the model using embeddings of the image. Model is trained in batchsize of 8 with 5 epochs. Relu activation for hidden layer and softmax for output layer. Saving the output as pickle format.</br>
+6. **facePredictor.py->** Purpose is to do the prediction of the face. </br>
+
 
 
 ## Theory behind Face Recongition
