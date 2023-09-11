@@ -76,7 +76,8 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 12.
 13. </br>
 
+## Training and Accuracy Loss
+![accuracy_loss](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/fd1a5d61-6e4f-4930-bfce-3d60c8aa91ba)
 
 
 
-6.  </br>
