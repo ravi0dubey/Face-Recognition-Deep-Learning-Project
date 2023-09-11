@@ -5,7 +5,7 @@ from src.detectfaces_mtcnn.Configurations import ConfigurationsPOJO
 import warnings
 import sys
 import dlib
-# from src.insightface.deploy import face_model
+
 
 warnings.filterwarnings('ignore')
 
@@ -21,32 +21,34 @@ import cv2
 class FacePredictor():
     def __init__(self):
         try:
-
             self.image_size = '112,112'
             self.model = "./insightface/models/model-y1-test2/model,0"
             self.threshold = 1.24
             self.det = 0
-            self.model_filename = '../src/com_in_ineuron_ai_sorting/model_data/mars-small128.pb'
+            # self.model_filename = '../src/sorting/model_data/mars-small128.pb'
 
             # # Initialize detector
             self.detector = MTCNN()
 
             # Initialize faces embedding model
             self.embedding_model = face_model.FaceModel(self.image_size, self.model, self.threshold, self.det)
-
+            
+            #Load the pickle file one of the embeddings and other of labels from the stored locations
             self.embeddings = "./faceEmbeddingModels/embeddings.pickle"
             self.le = "./faceEmbeddingModels/le.pickle"
 
             # Load embeddings and labels
             self.data = pickle.loads(open(self.embeddings, "rb").read())
             self.le = pickle.loads(open(self.le, "rb").read())
-
+            
+            # converting the embedding into numpy array                
             self.embeddings = np.array(self.data['embeddings'])
             self.labels = self.le.fit_transform(self.data['names'])
 
             # Load the classifier model
             self.model = load_model(ConfigurationsPOJO.clssfr_ModelPath)
-
+            
+            # In case we need to go with Distance approach of facial recognition then we need to define the threshold
             self.cosine_threshold = 0.8
             self.proba_threshold = 0.85
             self.comparing_num = 5
@@ -80,6 +82,7 @@ class FacePredictor():
         for source_vec in source_vecs:
             cos_dist += FacePredictor.findCosineDistance(test_vec, source_vec)
         return cos_dist / len(source_vecs)
+
 
     def detectFace(self):
         # Initialize some useful arguments

@@ -17,7 +17,7 @@ class ConfigurationsPOJO:
     camNo3 = 'cam3'
     camNo4 = 'cam4'
     TimeFormat = "%H:%M:%S"
-    timezone = 'Asia/Calcutta'
+    timezone = 'America/Toronto'
     cameraIpLoc = 'rtsp:/admin:admin1234@192.168.1.15:554/ISAPI/Streaming/channels/{}/picture'
 
     # For DeepSort Tracker
