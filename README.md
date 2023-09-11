@@ -9,8 +9,8 @@ We need a solution where in addition to detecting human face, model should be ab
 ## Solution Proposed
 
 In this project, the focus is to correctly detect the face and identify the face of the user using deepinsight/InsightFace.
-InsightFace is an integrated Python library for 2D&3D face analysis. It efficiently implements a rich variety of state of the art algorithms of face recognition, face detection and face alignment, which optimized for both training and deployment.
-github link of InsightFace https://github.com/deepinsight/insightface
+InsightFace is an integrated Python library for 2D&3D face analysis. It efficiently implements a rich variety of state of the art algorithms of face recognition, face detection and face alignment, which optimized for both training and deployment. </br>
+**github link of InsightFace** https://github.com/deepinsight/insightface
 
 ## Tech Stack Used
 Python </br>
