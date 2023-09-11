@@ -62,16 +62,15 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 
 
 
-## Theory behind Face Recongition
+## Logic behind Face Recongition Technique
 1. Get input images of the human faces. </br>
 2. Human faces needs to be labelled with the name. </br>
-3. We need to detect input face
-4. Input image of size 1280 * 720 needs to be cropped to size of 96*96 or 128*128 and then feed to deep learning algorithm.
-5. MTCNN detects the bounding box co-ordinates, co-ordinates of keypoints of the face(nose, mouth-right,right-eye,left-eye,mouth_left) and the confidence score of the face image)
-6. Then we need to do the Facial analysis, we need to create small feature and create array of the features.
-7. Converting image data into the numbers also called Embeddings </br> ![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c) </br>
-8. ds
-9. ss
+3. Input image of size 1280 * 720 needs to be cropped to size of 96*96 or 128*128 and then feed to deep learning algorithm.
+4. MTCNN detects the bounding box co-ordinates, co-ordinates of keypoints of the face(nose, mouth-right,right-eye,left-eye,mouth_left) and the confidence score of the face image)
+5. Then we need to do the Facial analysis for which we need to create small feature and create array of the features.
+6. We need to convert the image data into the numbers also called **Embeddings.** </br> ![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c) </br>
+7. Using Embeddings of the image(s) we can choose either **Machine learning**, **Deep Learning** or the **Distance approach** to do the facial recognition. </br>
+8. ss
 10. ss
 13. </br>
 
