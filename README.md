@@ -14,7 +14,7 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 
 ## Tech Stack Used
 Python </br>
-MTCNN</br>
+MTCNN(Multi-task Cascaded Convolutional Networks https://pypi.org/project/mtcnn/ </br>
 
 
 
@@ -56,9 +56,9 @@ MTCNN</br>
 1. Get input images of the human faces. </br>
 2. Human faces needs to be labelled with the name. </br>
 3. We need to detect input face and convert into numbers(co-ordinate) </br>![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c)
-4. Then we need to do the analysis of the image
-5. 
-6.
+4. Then we need to do the Facial analysis which is the analysis of image
+5. Convert image data into the numbers also called Embeddings
+6.  Input image of size 1280 * 720 needs to be cropped to size of 96*96 or 128*128 and then feed to deep learning algorithm.
 7.
 8.
 9. </br>
