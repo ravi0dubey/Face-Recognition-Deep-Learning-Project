@@ -55,9 +55,15 @@ MTCNN</br>
 ## Theory behind Face Recongition
 1. Get input images of the human faces. </br>
 2. Human faces needs to be labelled with the name. </br>
-3. For face detection: </br>
-4. Face needs to be converted into numbers(co-ordinate) </br>
-![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c)
+3. We need to detect input face and convert into numbers(co-ordinate) </br>![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c)
+4. Then we need to do the analysis of the image
+5. 
+6.
+7.
+8.
+9. </br>
 
-5.
+
+
+
 6.  </br>
