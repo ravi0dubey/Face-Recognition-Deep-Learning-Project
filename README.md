@@ -14,8 +14,8 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 
 ## Tech Stack Used
 1. Python </br>
-2. MTCNN(Multi-task Cascaded Convolutional Networks)  https://pypi.org/project/mtcnn/  </br>
-3.ss
+2. MTCNN(Multi-task Cascaded Convolutional Networks)  https://pypi.org/project/mtcnn/
+3. Keras to train the model </br>
 4.
 5.
 6.
