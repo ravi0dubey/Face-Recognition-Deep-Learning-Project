@@ -70,10 +70,11 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 5. Then we need to do the Facial analysis for which we need to create small feature and create array of the features.
 6. We need to convert the image data into the numbers also called **Embeddings.** </br> ![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c) </br>
 7. Using Embeddings of the image(s) we can choose either **Machine learning**, **Deep Learning** or the **Distance approach**(Cosine Distance and Consine Similarity) to do the facial recognition.s </br>
-8. If in case an unknown person/animal face comes up during prediction whose image has not been trained in such case model will show as **unknown**. </br>
-9. ss
-10. ss
-11. 
+8. In case of cosine similarity threshold is set to **.8**.
+9. If in case an unknown person/animal face comes up during prediction whose image has not been trained in such case model will show as **unknown**. </br>
+10. We use **tracking** to stop processing the Face recognition if the face remains the same during live feed i.e no new faces comes up and the existing face has already been recognized. This is done to minimize the computation done for already identified face.</br>
+11. If no face is found for recognition, we need to stop tracking to minimize the computation. </br>
+12. aa
 
 
 ## Training and Accuracy Loss
