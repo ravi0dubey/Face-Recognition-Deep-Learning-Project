@@ -69,10 +69,12 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 4. MTCNN detects the bounding box co-ordinates, co-ordinates of keypoints of the face(nose, mouth-right,right-eye,left-eye,mouth_left) and the confidence score of the face image)
 5. Then we need to do the Facial analysis for which we need to create small feature and create array of the features.
 6. We need to convert the image data into the numbers also called **Embeddings.** </br> ![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c) </br>
-7. Using Embeddings of the image(s) we can choose either **Machine learning**, **Deep Learning** or the **Distance approach** to do the facial recognition.s </br>
-8. ss
+7. Using Embeddings of the image(s) we can choose either **Machine learning**, **Deep Learning** or the **Distance approach**(Cosine Distance and Consine Similarity) to do the facial recognition.s </br>
+8. If in case an unknown person/animal face comes up during prediction whose image has not been trained in such case model will show as **unknown**. </br>
+9. ss
 10. ss
-13. </br>
+11. 
+
 
 ## Training and Accuracy Loss
 ![accuracy_loss](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/fd1a5d61-6e4f-4930-bfce-3d60c8aa91ba)
