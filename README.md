@@ -71,7 +71,7 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 9. If in case an unknown person/animal face comes up during prediction whose image has not been trained in such case model will show as **unknown**. </br>
 10. We use **tracking** to stop processing the Face recognition if the face remains the same during live feed i.e no new faces comes up and the existing face has already been recognized. This is done to minimize the computation done for already identified face.</br>
 11. If no face is found for recognition, we need to stop tracking to minimize the computation. </br>
-12. aa
+
 
 
 ## Training and Accuracy Loss
