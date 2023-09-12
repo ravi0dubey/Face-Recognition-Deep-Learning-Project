@@ -48,7 +48,7 @@ InsightFace is an integrated Python library for 2D&3D face analysis. It efficien
 
 
 ## Video link of project demo
-
+https://youtu.be/MKOaQu3aXSs
 
 ## How project was designed and build
 1. **app.py->** Driver program of the project which invokes the camera and then call subsquent method from each modules to perform the operations of collecting pictures from camera,training it and prediction of the face . </br>
