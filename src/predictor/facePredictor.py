@@ -102,19 +102,15 @@ class FacePredictor():
         save_height = int(800 / frame_width * frame_height)
 
         while True:
-            ret, frame = cap.read()
+            ret, frame = cap.read() # loading frame into memory
             frames += 1
             frame = cv2.resize(frame, (save_width, save_height))
             rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
             if frames % 3 == 0:
                 trackers = []
                 texts = []
-
                 bboxes =  self.detector.detect_faces(frame)
-
                 if len(bboxes) != 0:
-
                     for bboxe in bboxes:
                         bbox = bboxe['box']
                         bbox = np.array([bbox[0], bbox[1], bbox[0] + bbox[2], bbox[1] + bbox[3]])
@@ -128,16 +124,16 @@ class FacePredictor():
                         nimg = cv2.cvtColor(nimg, cv2.COLOR_BGR2RGB)
                         nimg = np.transpose(nimg, (2, 0, 1))
                         embedding = self.embedding_model.get_feature(nimg).reshape(1, -1)
-
-                        text = "Unknown"
-
+                       
+                        text = "Unknown" # if in case an unknow person/animal face comes up in prediction whose image has not been trained in such case model will show as unknow
+                       
                         # Predict class
                         preds =  self.model.predict(embedding)
                         preds = preds.flatten()
                         # Get the highest accuracy embedded vector
                         j = np.argmax(preds)
                         proba = preds[j]
-                        # Compare this vector to source class vectors to verify it is actual belong to this class
+                        # Compare this vector to source class vectors to verify if it actually belong to this class
                         match_class_idx = ( self.labels == j)
                         match_class_idx = np.where(match_class_idx)[0]
                         selected_idx = np.random.choice(match_class_idx, comparing_num)
@@ -148,26 +144,26 @@ class FacePredictor():
                             name =  self.le.classes_[j]
                             text = "{}".format(name)
                             print("Recognized: {} <{:.2f}>".format(name, proba * 100))
-                        # Start tracking
+                        # Start tracking to stop processing the Face recognition if the face remains the same during live feed 
+                        # i.e no new faces comes up and the existing face has already been recognized. This is done to minimize the computation done for already identified image
                         tracker = dlib.correlation_tracker()
                         rect = dlib.rectangle(bbox[0], bbox[1], bbox[2], bbox[3])
                         tracker.start_track(rgb, rect)
                         trackers.append(tracker)
                         texts.append(text)
-
                         y = bbox[1] - 10 if bbox[1] - 10 > 10 else bbox[1] + 10
                         cv2.putText(frame, text, (bbox[0], y), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (255, 255, 255), 1)
                         cv2.rectangle(frame, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (179, 0, 149), 4)
+            
+            # if no face is found still we need to stop tracking to minimize the computation.
             else:
                 for tracker, text in zip(trackers, texts):
                     pos = tracker.get_position()
-
                     # unpack the position object
                     startX = int(pos.left())
                     startY = int(pos.top())
                     endX = int(pos.right())
                     endY = int(pos.bottom())
-
                     cv2.rectangle(frame, (startX, startY), (endX, endY), (179, 0, 149), 4)
                     cv2.putText(frame, text, (startX, startY - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (255, 255, 255), 1)
 
