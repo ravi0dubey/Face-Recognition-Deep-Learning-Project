@@ -52,7 +52,7 @@ https://youtu.be/MKOaQu3aXSs
 
 ## How project was designed and build
 1. **app.py->** Driver program of the project which invokes the camera and then call subsquent method from each modules to perform the operations of collecting pictures from camera,training it and prediction of the face . </br>
-2. **get_faces_from_camera.py->** Purpose is the get the 50 images from live feed of camera and crop the facial feature of the image and save it in 112*112 dimension </br> 
+2. **get_faces_from_camera.py->** Purpose is the get the 50 images from live feed of camera and crop the facial feature of the image and save it in 112 * 112 dimension </br> 
 3. **faces_embedding.py->** Purpose of this class is to convert image into numerical value and saving it in pickel format. This process is called Face Embedding </br>
 4. **train_softmax.py->** Purpose is to train the model using embeddings of the image. Model is trained in batchsize of 8 with 5 epochs. Relu activation for hidden layer and softmax for output layer. Saving the output as pickle format.</br>
 5. **facePredictor.py->** Purpose is to do the prediction of the face. </br>
@@ -62,7 +62,7 @@ https://youtu.be/MKOaQu3aXSs
 ## Logic behind Face Recongition Technique
 1. Get input images of the human faces. </br>
 2. Human faces needs to be labelled with the name. </br>
-3. Input image of size 1280 * 720 needs to be cropped to size of 96*96 or 128*128 and then feed to deep learning algorithm.
+3. Input image of size 1280 * 720 needs to be cropped to size of 96 * 96 or 128 * 128 and then feed to deep learning algorithm.
 4. MTCNN detects the bounding box co-ordinates, co-ordinates of keypoints of the face(nose, mouth-right,right-eye,left-eye,mouth_left) and the confidence score of the face image)
 5. Then we need to do the Facial analysis for which we need to create small feature and create array of the features.
 6. We need to convert the image data into the numbers also called **Embeddings.** </br> ![image](https://github.com/ravi0dubey/Face-Recognition-Deep-Learning-Project/assets/38419795/3b1032e8-b053-46a4-9d4a-028a40ed705c) </br>
